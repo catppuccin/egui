@@ -36,19 +36,22 @@
 
 ## Usage
 
-1. Clone this repository locally
-2. Open the app's settings
-3. Select `import theme` and browse to where you cloned Catppuccin
-4. Select it
+Add this to your Cargo.toml:
 
-## 🙋 FAQ (optional)
+```toml
+[dependencies]
+catppuccin-egui = "1.0"
+```
 
--	Q: **_"Where can I find the doc?"_**\
-	A: Run `:help theme`
+To use a theme, call the `set_theme` function with a theme and the egui context:
+
+```rust
+catppuccin_egui::set_theme(&ctx, catppuccin_egui::MOCHA);
+```
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [Sam Nystrom](https://github.com/Stonks3141)
 
 &nbsp;
 
