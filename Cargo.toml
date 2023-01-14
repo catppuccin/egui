@@ -1,7 +1,17 @@
 [package]
 name = "catppuccin-egui"
 version = "1.0.0"
+authors = ["Sam Nystrom <samuel.l.nystrom@gmail.com>"]
 edition = "2021"
+description = "Soothing pastel theme for egui"
+documentation = "https://docs.rs/catppuccin-egui/latest/catppuccin_egui"
+readme = "README.md"
+homepage = "https://github.com/Stonks3141/egui"
+repository = "https://github.com/Stonks3141/egui"
+license = "MIT"
+keywords = ["egui", "catppuccin", "theme", "gui"]
+categories = ["gui"]
+exclude = ["assets/"]
 
 [dependencies]
 egui = "0.20"
