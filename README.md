@@ -6,9 +6,9 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/Stonks3141/egui/stargazers"><img src="https://img.shields.io/github/stars/Stonks3141/egui?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/Stonks3141/egui/issues"><img src="https://img.shields.io/github/issues/Stonks3141/egui?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/Stonks3141/egui/contributors"><img src="https://img.shields.io/github/contributors/Stonks3141/egui?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/Stonks3141/egui/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Stonks3141/egui/ci.yml?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://crates.io/crates/catppuccin-egui"><img src="https://img.shields.io/crates/v/catppuccin-egui?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://docs.rs/catppuccin-egui"><img src="https://img.shields.io/docsrs/catppuccin-egui?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
@@ -48,6 +48,8 @@ To use a theme, call the `set_theme` function with a theme and the egui context:
 ```rust
 catppuccin_egui::set_theme(&ctx, catppuccin_egui::MOCHA);
 ```
+
+See the full documentation at [docs.rs/catppuccin-egui](https://docs.rs/catppuccin-egui).
 
 ## 💝 Thanks to
 
