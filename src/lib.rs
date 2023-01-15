@@ -43,7 +43,7 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
             ..old.widgets
         },
         selection: style::Selection {
-            bg_fill: theme.red, // TODO
+            bg_fill: theme.blue.linear_multiply(0.4),
             stroke: egui::Stroke {
                 color: theme.overlay1,
                 ..old.selection.stroke
