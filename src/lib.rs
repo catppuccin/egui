@@ -5,7 +5,7 @@
 //!
 //! # Example
 //!
-//! ```ignore,rust
+//! ```rust
 //! struct App;
 //! impl eframe::App for App {
 //!     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
@@ -15,6 +15,16 @@
 //!         });
 //!     }
 //! }
+//! ```
+//!
+//! You can also customize your own theme:
+//!
+//! ```rust
+//! use catppuccin_egui::{Theme, MOCHA};
+//! const MY_MOCHA: Theme = Theme {
+//!     red: egui::Color32::from_rgb(255, 0, 0),
+//!     ..MOCHA
+//! };
 //! ```
 //!
 
