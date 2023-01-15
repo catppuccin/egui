@@ -1,3 +1,5 @@
+//! A simple demo todo app for the theme previews.
+
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use eframe::egui;
@@ -20,9 +22,9 @@ pub struct App {
 
 #[derive(Debug, Default, Clone, Copy, PartialEq, Eq)]
 enum Mode {
+    #[default]
     All,
     Completed,
-    #[default]
     Active,
 }
 
@@ -58,9 +60,10 @@ est laborum.";
         Self {
             todos: LOREM_IPSUM
                 .lines()
-                .map(|text| Todo {
+                .enumerate()
+                .map(|(i, text)| Todo {
                     description: text.to_string(),
-                    completed: false,
+                    completed: i > 21,
                 })
                 .collect(),
             new_todo: String::new(),
@@ -71,7 +74,7 @@ est laborum.";
 
 impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        catppuccin_egui::set_theme(ctx, catppuccin_egui::FRAPPE);
+        catppuccin_egui::set_theme(ctx, catppuccin_egui::MACCHIATO);
         ctx.set_pixels_per_point(1.25);
 
         let mut fonts = egui::FontDefinitions::default();
