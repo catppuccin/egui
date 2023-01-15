@@ -6,38 +6,38 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/Stonks3141/egui/stargazers"><img src="https://img.shields.io/github/stars/Stonks3141/egui?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/Stonks3141/egui/issues"><img src="https://img.shields.io/github/issues/Stonks3141/egui?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/Stonks3141/egui/contributors"><img src="https://img.shields.io/github/contributors/Stonks3141/egui?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/egui/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/egui?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/egui/issues"><img src="https://img.shields.io/github/issues/catppuccin/egui?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/egui/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/egui?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
-	<a href="https://github.com/Stonks3141/egui/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Stonks3141/egui/ci.yml?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/egui/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/catppuccin/egui/ci.yml?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
 	<a href="https://crates.io/crates/catppuccin-egui"><img src="https://img.shields.io/crates/v/catppuccin-egui?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
 	<a href="https://docs.rs/catppuccin-egui"><img src="https://img.shields.io/docsrs/catppuccin-egui?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/Stonks3141/egui/main/assets/previews/preview.webp"/>
+	<img src="https://raw.githubusercontent.com/catppuccin/egui/main/assets/previews/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/Stonks3141/egui/main/assets/previews/latte.png"/>
+<img src="https://raw.githubusercontent.com/catppuccin/egui/main/assets/previews/latte.png"/>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/Stonks3141/egui/main/assets/previews/frappe.png"/>
+<img src="https://raw.githubusercontent.com/catppuccin/egui/main/assets/previews/frappe.png"/>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/Stonks3141/egui/main/assets/previews/macchiato.png"/>
+<img src="https://raw.githubusercontent.com/catppuccin/egui/main/assets/previews/macchiato.png"/>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/Stonks3141/egui/main/assets/previews/mocha.png"/>
+<img src="https://raw.githubusercontent.com/catppuccin/egui/main/assets/previews/mocha.png"/>
 </details>
 
 ## Usage
@@ -72,5 +72,5 @@ See the full documentation at [docs.rs/catppuccin-egui](https://docs.rs/catppucc
 </p>
 
 <p align="center">
-	<a href="https://github.com/Stonks3141/egui/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+	<a href="https://github.com/catppuccin/egui/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
 </p>
