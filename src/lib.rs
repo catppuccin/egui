@@ -1,7 +1,7 @@
 //! Soothing pastel theme for [egui](egui).
 //!
-//! To use, call [set_theme](crate::set_theme) with the egui context
-//! and a [Theme](crate::Theme).
+//! To use, call [`set_theme`](crate::set_theme) with the egui context
+//! and a [`Theme`](crate::Theme).
 //!
 //! # Example
 //!
@@ -30,7 +30,7 @@
 
 use egui::{style, Color32};
 
-/// Apply the given theme to a [Context](egui::Context).
+/// Apply the given theme to a [`Context`](egui::Context).
 pub fn set_theme(ctx: &egui::Context, theme: Theme) {
     ctx.set_pixels_per_point(1.25);
     let old = ctx.style().visuals.clone();
