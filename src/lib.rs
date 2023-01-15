@@ -30,6 +30,8 @@
 
 use egui::{style, Color32};
 
+// TODO: take a reference to a `Theme` here if we get a better reason to bump
+// the major version
 /// Apply the given theme to a [`Context`](egui::Context).
 pub fn set_theme(ctx: &egui::Context, theme: Theme) {
     ctx.set_pixels_per_point(1.25);
