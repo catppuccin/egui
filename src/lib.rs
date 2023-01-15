@@ -39,8 +39,7 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
             inactive: make_widget_visual(old.widgets.inactive, &theme, theme.surface0),
             hovered: make_widget_visual(old.widgets.hovered, &theme, theme.surface2),
             active: make_widget_visual(old.widgets.active, &theme, theme.surface1),
-            open: make_widget_visual(old.widgets.open, &theme, theme.surface0), // TODO
-            ..old.widgets
+            open: make_widget_visual(old.widgets.open, &theme, theme.surface0),
         },
         selection: style::Selection {
             bg_fill: theme.blue.linear_multiply(0.4),
