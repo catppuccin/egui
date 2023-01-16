@@ -34,7 +34,6 @@ use egui::{style, Color32};
 // the major version
 /// Apply the given theme to a [`Context`](egui::Context).
 pub fn set_theme(ctx: &egui::Context, theme: Theme) {
-    ctx.set_pixels_per_point(1.25);
     let old = ctx.style().visuals.clone();
     ctx.set_visuals(egui::Visuals {
         override_text_color: Some(theme.text),
