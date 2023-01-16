@@ -1,6 +1,6 @@
 [package]
 name = "catppuccin-egui"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["Sam Nystrom <samuel.l.nystrom@gmail.com>"]
 edition = "2021"
 description = "Soothing pastel theme for egui."
