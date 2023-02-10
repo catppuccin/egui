@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/catppuccin/egui/compare/v1.0.2...v2.0.0) (2023-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update egui
+
+### Bug Fixes
+
+* **deps:** update egui ([5f7235f](https://github.com/catppuccin/egui/commit/5f7235f19ff373b31c658ec50acafa0208b96f64))
+
 ## [1.0.2](https://github.com/catppuccin/egui/compare/v1.0.1...v1.0.2) (2023-01-14)
 
 
