@@ -46,7 +46,7 @@ Add this to your Cargo.toml:
 
 ```toml
 [dependencies]
-catppuccin-egui = "1.0"
+catppuccin-egui = "2.0"
 ```
 
 To use a theme, call the `set_theme` function with a theme and the egui context:
@@ -59,7 +59,7 @@ See the full documentation at [docs.rs/catppuccin-egui](https://docs.rs/catppucc
 
 ## 💝 Thanks to
 
-- [Sam Nystrom](https://github.com/Stonks3141)
+- [Stonks3141](https://github.com/Stonks3141)
 
 &nbsp;
 
