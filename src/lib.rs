@@ -53,7 +53,9 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
             open: make_widget_visual(old.widgets.open, &theme, theme.surface0),
         },
         selection: style::Selection {
-            bg_fill: theme.blue.linear_multiply(0.4),
+            bg_fill: theme
+                .blue
+                .linear_multiply(if theme == LATTE { 0.4 } else { 0.2 }),
             stroke: egui::Stroke {
                 color: theme.overlay1,
                 ..old.selection.stroke
