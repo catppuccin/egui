@@ -6,18 +6,24 @@ use eframe::egui;
 
 fn main() {
     let native_options = eframe::NativeOptions::default();
-    eframe::run_native(
-        "todos",
-        native_options,
-        Box::new(|_| Box::new(App::default())),
-    );
+    let app = App::default();
+    if let Err(e) = eframe::run_native("todos", native_options, Box::new(|_| Box::new(app))) {
+        eprintln!("{e}");
+        std::process::exit(1);
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub struct App {
+struct App {
     todos: Vec<Todo>,
     new_todo: String,
     mode: Mode,
+}
+
+#[derive(Debug, Default, Clone, PartialEq, Eq)]
+struct Todo {
+    description: String,
+    completed: bool,
 }
 
 #[derive(Debug, Default, Clone, Copy, PartialEq, Eq)]
@@ -30,36 +36,38 @@ enum Mode {
 
 impl Default for App {
     fn default() -> Self {
-        const LOREM_IPSUM: &str = "Lorem ipsum
-dolor sit amet
-consectetur adipiscing
-elit, sed do
-eiusmod tempor
-incididunt ut labore
-et dolore magna
-aliqua. Ut enim
-ad minim veniam, quis
-nostrud
-exercitation ullamco
-laboris nisi
-ut aliquip ex
-ea commodo consequat.
-Duis aute irure
-dolor in reprehenderit
-in voluptate velit
-esse cillum
-dolore eu fugiat
-nulla pariatur.
-Excepteur sint
-occaecat cupidatat
-non proident, sunt
-in culpa qui
-officia deserunt
-mollit anim id
-est laborum.";
+        let ipsum = [
+            "Lorem ipsum",
+            "dolor sit amet",
+            "consectetur adipiscing",
+            "elit, sed do",
+            "eiusmod tempor",
+            "incididunt ut labore",
+            "et dolore magna",
+            "aliqua. Ut enim",
+            "ad minim veniam, quis",
+            "nostrud",
+            "exercitation ullamco",
+            "laboris nisi",
+            "ut aliquip ex",
+            "ea commodo consequat.",
+            "Duis aute irure",
+            "dolor in reprehenderit",
+            "in voluptate velit",
+            "esse cillum",
+            "dolore eu fugiat",
+            "nulla pariatur.",
+            "Excepteur sint",
+            "occaecat cupidatat",
+            "non proident, sunt",
+            "in culpa qui",
+            "officia deserunt",
+            "mollit anim id",
+            "est laborum.",
+        ];
         Self {
-            todos: LOREM_IPSUM
-                .lines()
+            todos: ipsum
+                .into_iter()
                 .enumerate()
                 .map(|(i, text)| Todo {
                     description: text.to_string(),
@@ -74,7 +82,7 @@ est laborum.";
 
 impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        catppuccin_egui::set_theme(ctx, catppuccin_egui::MACCHIATO);
+        catppuccin_egui::set_theme(ctx, catppuccin_egui::MOCHA);
         ctx.set_pixels_per_point(1.25);
 
         let mut fonts = egui::FontDefinitions::default();
@@ -89,7 +97,7 @@ impl eframe::App for App {
             .insert(0, "open-sans".to_string());
         ctx.set_fonts(fonts);
 
-        egui::CentralPanel::default().show(&ctx, |ui| {
+        egui::CentralPanel::default().show(ctx, |ui| {
             ui.heading("Todos");
             ui.horizontal(|ui| {
                 if ui.text_edit_singleline(&mut self.new_todo).lost_focus()
@@ -121,31 +129,24 @@ impl eframe::App for App {
                     }
                 });
 
-            if self.todos.len() > 0 {
+            if !self.todos.is_empty() {
                 ui.separator();
                 ui.horizontal(|ui| {
                     ui.selectable_value(&mut self.mode, Mode::Active, "Active");
                     ui.selectable_value(&mut self.mode, Mode::Completed, "Completed");
                     ui.selectable_value(&mut self.mode, Mode::All, "All");
                     let completed = self.todos.iter().filter(|todo| todo.completed).count();
-                    if completed > 0 {
-                        if ui
+                    if completed > 0
+                        && ui
                             .button(format!("Clear completed ({})", completed))
                             .clicked()
-                        {
-                            self.todos.retain(|todo| !todo.completed);
-                        }
+                    {
+                        self.todos.retain(|todo| !todo.completed);
                     }
                 });
             }
         });
     }
-}
-
-#[derive(Debug, Default, Clone, PartialEq, Eq)]
-struct Todo {
-    description: String,
-    completed: bool,
 }
 
 impl Todo {
