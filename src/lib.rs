@@ -70,6 +70,7 @@ fn make_widget_visual(
 ) -> style::WidgetVisuals {
     style::WidgetVisuals {
         bg_fill,
+        weak_bg_fill: bg_fill,
         bg_stroke: egui::Stroke {
             color: theme.overlay1,
             ..old.bg_stroke
