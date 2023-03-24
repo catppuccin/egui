@@ -9,7 +9,7 @@
 //! struct App;
 //! impl eframe::App for App {
 //!     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-//!         catppuccin_egui::set_theme(&ctx, catppuccin_egui::MACCHIATO);
+//!         catppuccin_egui::set_theme(ctx, catppuccin_egui::MACCHIATO);
 //!         egui::CentralPanel::default().show(&ctx, |ui| {
 //!             ui.label("Hello, world!");
 //!         });
@@ -28,10 +28,8 @@
 //! ```
 //!
 
-use egui::{style, Color32};
+use egui::{epaint, style, Color32};
 
-// TODO: take a reference to a `Theme` here if we get a better reason to bump
-// the major version
 /// Apply the given theme to a [`Context`](egui::Context).
 pub fn set_theme(ctx: &egui::Context, theme: Theme) {
     let old = ctx.style().visuals.clone();
@@ -45,6 +43,10 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
         error_fg_color: theme.maroon,
         window_fill: theme.base,
         panel_fill: theme.base,
+        window_stroke: egui::Stroke {
+            color: theme.overlay1,
+            ..old.window_stroke
+        },
         widgets: style::Widgets {
             noninteractive: make_widget_visual(old.widgets.noninteractive, &theme, theme.base),
             inactive: make_widget_visual(old.widgets.inactive, &theme, theme.surface0),
@@ -60,6 +62,14 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
                 color: theme.overlay1,
                 ..old.selection.stroke
             },
+        },
+        window_shadow: epaint::Shadow {
+            color: theme.base,
+            ..old.window_shadow
+        },
+        popup_shadow: epaint::Shadow {
+            color: theme.base,
+            ..old.popup_shadow
         },
         ..old
     });
@@ -85,6 +95,8 @@ fn make_widget_visual(
     }
 }
 
+// FIXME: Theme should be `Copy` since it isn't big enough to generate a call to `memcpy`,
+// do this when egui releases a minor version
 /// The colors for a theme variant.
 #[derive(Debug, Clone, Hash, PartialEq, Eq)]
 pub struct Theme {
