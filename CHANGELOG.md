@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.1](https://github.com/catppuccin/egui/compare/v2.0.0...v2.0.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* improve contrast for selected elements ([4587838](https://github.com/catppuccin/egui/commit/4587838d6dfae0dde127d5907b6543c7ad716536))
+* set weak bg fill on widgets ([7f606c3](https://github.com/catppuccin/egui/commit/7f606c3b7f4f45d4672ae92cc4b20d774866920a))
+* theme window stroke and window/popup shadows ([6dd2784](https://github.com/catppuccin/egui/commit/6dd27845b5365fd5603aaeadf34758212491b267))
+
 ## [2.0.0](https://github.com/catppuccin/egui/compare/v1.0.2...v2.0.0) (2023-02-10)
 
 
