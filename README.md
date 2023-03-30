@@ -42,7 +42,7 @@
 
 ## Usage
 
-Add this to your Cargo.toml:
+Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
@@ -55,7 +55,7 @@ To use a theme, call the `set_theme` function with a theme and the egui context:
 catppuccin_egui::set_theme(&ctx, catppuccin_egui::MOCHA);
 ```
 
-See the full documentation at [docs.rs/catppuccin-egui](https://docs.rs/catppuccin-egui).
+See the full documentation at https://docs.rs/catppuccin-egui.
 
 ## 💝 Thanks to
 
