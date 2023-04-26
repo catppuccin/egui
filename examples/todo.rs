@@ -2,6 +2,7 @@
 
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use catppuccin_egui::{FRAPPE, LATTE, MACCHIATO, MOCHA};
 use eframe::egui;
 
 fn main() {
@@ -18,6 +19,15 @@ struct App {
     todos: Vec<Todo>,
     new_todo: String,
     mode: Mode,
+    theme: CatppuccinTheme,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+enum CatppuccinTheme {
+    Frappe,
+    Latte,
+    Macchiato,
+    Mocha,
 }
 
 #[derive(Debug, Default, Clone, PartialEq, Eq)]
@@ -76,13 +86,22 @@ impl Default for App {
                 .collect(),
             new_todo: String::new(),
             mode: Mode::default(),
+            theme: CatppuccinTheme::Mocha,
         }
     }
 }
 
 impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        catppuccin_egui::set_theme(ctx, catppuccin_egui::MOCHA);
+        catppuccin_egui::set_theme(
+            ctx,
+            match self.theme {
+                CatppuccinTheme::Frappe => FRAPPE,
+                CatppuccinTheme::Latte => LATTE,
+                CatppuccinTheme::Macchiato => MACCHIATO,
+                CatppuccinTheme::Mocha => MOCHA,
+            },
+        );
         ctx.set_pixels_per_point(1.25);
 
         let mut fonts = egui::FontDefinitions::default();
@@ -98,7 +117,17 @@ impl eframe::App for App {
         ctx.set_fonts(fonts);
 
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.heading("Todos");
+            ui.horizontal(|ui| {
+                ui.heading("Todos");
+                egui::ComboBox::from_label("")
+                    .selected_text(format!("{:?}", self.theme))
+                    .show_ui(ui, |ui| {
+                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Latte, "Latte");
+                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Frappe, "Frappe");
+                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Macchiato, "Macchiato");
+                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Mocha, "Mocha");
+                    });
+            });
             ui.horizontal(|ui| {
                 if ui.text_edit_singleline(&mut self.new_todo).lost_focus()
                     && !self.new_todo.is_empty()
