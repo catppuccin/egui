@@ -117,17 +117,24 @@ impl eframe::App for App {
         ctx.set_fonts(fonts);
 
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.horizontal(|ui| {
-                ui.heading("Todos");
-                egui::ComboBox::from_label("")
-                    .selected_text(format!("{:?}", self.theme))
-                    .show_ui(ui, |ui| {
-                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Latte, "Latte");
-                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Frappe, "Frappe");
-                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Macchiato, "Macchiato");
-                        ui.selectable_value(&mut self.theme, CatppuccinTheme::Mocha, "Mocha");
-                    });
+            ui.columns(2, |columns| {
+                columns[0].heading("Todos");
+                columns[1].with_layout(egui::Layout::right_to_left(egui::Align::TOP), |ui| {
+                    egui::ComboBox::from_label("")
+                        .selected_text(format!("{:?}", self.theme))
+                        .show_ui(ui, |ui| {
+                            ui.selectable_value(&mut self.theme, CatppuccinTheme::Latte, "Latte");
+                            ui.selectable_value(&mut self.theme, CatppuccinTheme::Frappe, "Frappe");
+                            ui.selectable_value(
+                                &mut self.theme,
+                                CatppuccinTheme::Macchiato,
+                                "Macchiato",
+                            );
+                            ui.selectable_value(&mut self.theme, CatppuccinTheme::Mocha, "Mocha");
+                        });
+                });
             });
+
             ui.horizontal(|ui| {
                 if ui.text_edit_singleline(&mut self.new_todo).lost_focus()
                     && !self.new_todo.is_empty()
@@ -140,6 +147,7 @@ impl eframe::App for App {
                     self.new_todo.clear();
                 }
             });
+
             ui.separator();
 
             egui::ScrollArea::vertical()
