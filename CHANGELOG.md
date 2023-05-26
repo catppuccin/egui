@@ -11,10 +11,6 @@
 
 * **deps:** Update egui to 0.22 ([#6](https://github.com/catppuccin/egui/issues/6)) ([8c97331](https://github.com/catppuccin/egui/commit/8c973310a66b4a7fd1788ccf15e72cbd5f7f9f7d))
 
-## [2.0.2](https://github.com/catppuccin/egui/compare/v2.0.1...v2.0.2) (2023-05-25)
-
-* Bump egui version to 0.22
-
 ## [2.0.1](https://github.com/catppuccin/egui/compare/v2.0.0...v2.0.1) (2023-03-24)
 
 
