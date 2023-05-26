@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.2](https://github.com/catppuccin/egui/compare/v2.0.1...v2.0.2) (2023-05-25)
+
+* Bump egui version to 0.22
+
 ## [2.0.1](https://github.com/catppuccin/egui/compare/v2.0.0...v2.0.1) (2023-03-24)
 
 
