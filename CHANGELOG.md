@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/catppuccin/egui/compare/v3.0.0...v3.1.0) (2023-05-26)
+
+
+### Features
+
+* implement `Copy` for `Theme` ([97934d1](https://github.com/catppuccin/egui/commit/97934d1d5517194c61b35913e8ac6f6970934312)), closes [#8](https://github.com/catppuccin/egui/issues/8)
+
 ## [3.0.0](https://github.com/catppuccin/egui/compare/v2.0.1...v3.0.0) (2023-05-26)
 
 
