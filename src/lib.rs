@@ -95,10 +95,8 @@ fn make_widget_visual(
     }
 }
 
-// FIXME: Theme should be `Copy` since it isn't big enough to generate a call to `memcpy`,
-// do this when egui releases a minor version
 /// The colors for a theme variant.
-#[derive(Debug, Clone, Hash, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
 pub struct Theme {
     pub rosewater: Color32,
     pub flamingo: Color32,
