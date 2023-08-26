@@ -106,6 +106,7 @@ pub struct Theme {
 
 impl Theme {
     fn visuals(&self, old: egui::Visuals) -> egui::Visuals {
+        let is_latte = *self == LATTE;
         egui::Visuals {
             override_text_color: Some(self.text),
             hyperlink_color: self.rosewater,
@@ -128,9 +129,7 @@ impl Theme {
                 open: make_widget_visual(old.widgets.open, self, self.surface0),
             },
             selection: style::Selection {
-                bg_fill: self
-                    .blue
-                    .linear_multiply(if *self == LATTE { 0.4 } else { 0.2 }),
+                bg_fill: self.blue.linear_multiply(if is_latte { 0.4 } else { 0.2 }),
                 stroke: egui::Stroke {
                     color: self.overlay1,
                     ..old.selection.stroke
@@ -144,6 +143,7 @@ impl Theme {
                 color: self.base,
                 ..old.popup_shadow
             },
+            dark_mode: !is_latte,
             ..old
         }
     }
