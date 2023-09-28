@@ -1,6 +1,6 @@
 [package]
 name = "catppuccin-egui"
-version = "3.1.0"
+version = "3.1.1"
 authors = ["Sam Nystrom <sam@samnystrom.dev>"]
 edition = "2021"
 description = "Soothing pastel theme for egui."
@@ -14,7 +14,7 @@ categories = ["gui"]
 exclude = ["assets/"]
 
 [dependencies]
-egui = "0.22"
+egui = "0.23"
 
 [dev-dependencies]
-eframe = "0.22"
+eframe = "0.23"
