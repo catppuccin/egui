@@ -14,7 +14,7 @@ categories = ["gui"]
 exclude = ["assets/"]
 
 [dependencies]
-egui = "0.22"
+egui = "0.23"
 
 [dev-dependencies]
 eframe = "0.23"
