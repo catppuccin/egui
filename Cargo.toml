@@ -17,4 +17,4 @@ exclude = ["assets/"]
 egui = "0.23"
 
 [dev-dependencies]
-eframe = "0.23"
+eframe = "0.24"
