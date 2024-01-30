@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v3
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v3
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -41,23 +41,46 @@ jobs:
       - name: Run tests
         run: cargo test
 
-  Publish:
+  check-published-version:
+    name: Check published version
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environment: crates.io
     needs:
       - Check
       - Test
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install gojq
+        run: sudo apt-get install gojq
+      - name: 'Check if crate ${{ inputs.crate }} is published'
+        run: |
+          set -euxo pipefail
+          url="https://raw.githubusercontent.com/rust-lang/crates.io-index/master/ca/tp/catppuccin-egui"
+          published="$(curl -fsSL "$url" | gojq -sr 'map(.vers) | sort | .[-1]')"
+          manifest="$(awk -F \" '/version = / { print $2 }' Cargo.toml)"
+
+          if [ "$manifest" = "$published" ]; then
+            echo 'new_version=no' >> $GITHUB_OUTPUT
+          else
+            echo 'new_version=yes' >> $GITHUB_OUTPUT
+          fi
+
+  Publish:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && needs.check-published-version.outputs.new_version == 'yes'
+    environment: crates.io
+    needs:
+      - check-published-version
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
         with:
           cache-on-failure: true
-      - name: Install cargo-workspaces
-        run: cargo install cargo-workspaces
       - name: Publish crates
-        run: cargo ws publish -y --from-git --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
