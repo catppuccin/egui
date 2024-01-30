@@ -1,5 +1,24 @@
 # Changelog
 
+## [4.0.0](https://github.com/catppuccin/egui/compare/v3.1.0...v4.0.0) (2024-01-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update public dependency egui to 0.25
+* **deps:** Update public dependency "egui" to 0.24
+
+### Features
+
+* add funtction to apply theme to a Style ([8db4c01](https://github.com/catppuccin/egui/commit/8db4c01f14ca5269a21f143142bc9eba067742fc))
+* set dark_mode visuals field ([#12](https://github.com/catppuccin/egui/issues/12)) ([709bfa3](https://github.com/catppuccin/egui/commit/709bfa33bfefeee561c7c9208b6e70041683a68a))
+
+
+### Bug Fixes
+
+* **deps:** update eframe and egui to 0.24 ([#18](https://github.com/catppuccin/egui/issues/18)) ([bcb5849](https://github.com/catppuccin/egui/commit/bcb5849b6f96b56aa4982ec3366e238371de473e))
+* **deps:** update egui requirement from 0.24 to 0.25 ([#20](https://github.com/catppuccin/egui/issues/20)) ([99453ca](https://github.com/catppuccin/egui/commit/99453cab89c10565dc5807f85ad104da6ce626fa))
+
 ## [3.1.0](https://github.com/catppuccin/egui/compare/v3.0.0...v3.1.0) (2023-05-26)
 
 
