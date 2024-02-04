@@ -1,0 +1,3 @@
+pre-release-replacements = [
+    { file="README.md", search="catppuccin-egui = .*", replace="{{crate_name}} = \"^{{version}}\"" }
+]
