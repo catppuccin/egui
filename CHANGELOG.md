@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/catppuccin/egui/compare/v4.0.0...v5.0.0) (2024-02-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update public dependency egui
+
+### Bug Fixes
+
+* **deps:** update egui to v0.26 ([#31](https://github.com/catppuccin/egui/issues/31)) ([0336114](https://github.com/catppuccin/egui/commit/0336114550ae06b471596df53ea388089f6fe8d3))
+
 ## [4.0.0](https://github.com/catppuccin/egui/compare/v3.1.0...v4.0.0) (2024-01-30)
 
 
