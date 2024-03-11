@@ -32,4 +32,4 @@ jobs:
       - name: Publish crates
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: cargo release --allow-branch main --execute --unpublished --no-tag
+        run: cargo release --allow-branch main --execute --unpublished --no-tag --no-confirm
