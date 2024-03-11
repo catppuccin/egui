@@ -49,12 +49,15 @@ jobs:
       - Check
       - Test
 
+    outputs:
+      new_version: ${{ steps.last.outputs.new_version }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Install gojq
         run: sudo apt-get install gojq
-      - name: 'Check if crate ${{ inputs.crate }} is published'
+      - name: 'Check if crate catppuccin-egui is published'
+        id: last
         run: |
           set -euxo pipefail
           url="https://raw.githubusercontent.com/rust-lang/crates.io-index/master/ca/tp/catppuccin-egui"
