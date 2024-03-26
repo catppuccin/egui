@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.1](https://github.com/catppuccin/egui/compare/v5.0.0...v5.0.1) (2024-03-26)
+
+
+### Reverts
+
+* return to previous publish workflow ([8859c58](https://github.com/catppuccin/egui/commit/8859c588102b47ca3f989a89a067bc73313e12a6))
+
 ## [5.0.0](https://github.com/catppuccin/egui/compare/v4.0.0...v5.0.0) (2024-02-25)
 
 
