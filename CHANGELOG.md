@@ -1,6 +1,6 @@
 # Changelog
 
-## [6.0.0](https://github.com/catppuccin/egui/compare/v4.0.0...v5.0.0) (2024-03-27)
+## [6.0.0](https://github.com/catppuccin/egui/compare/v5.0.0...v6.0.0) (2024-03-27)
 
 
 ### ⚠ BREAKING CHANGES
