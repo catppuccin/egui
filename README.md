@@ -48,7 +48,7 @@ Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-catppuccin-egui = { version = "5.0", features = ["egui27"] }
+catppuccin-egui = { version = "5.1", default-features = false, features = ["egui27"] }
 ```
 
 To use a theme, call the `set_theme` function with a theme and the egui context:
