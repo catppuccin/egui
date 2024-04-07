@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.0](https://github.com/catppuccin/egui/compare/v5.0.0...v5.1.0) (2024-04-07)
+
+
+### Features
+
+* add support for egui version 0.27 ([#40](https://github.com/catppuccin/egui/issues/40)) ([bb3d199](https://github.com/catppuccin/egui/commit/bb3d199616da4a8e113050aa2b59639307e4f414))
+
+
+### Reverts
+
+* return to previous publish workflow ([8859c58](https://github.com/catppuccin/egui/commit/8859c588102b47ca3f989a89a067bc73313e12a6))
+
 ## [5.0.0](https://github.com/catppuccin/egui/compare/v4.0.0...v5.0.0) (2024-02-25)
 
 
