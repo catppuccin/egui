@@ -14,7 +14,11 @@ categories = ["gui"]
 exclude = ["assets/"]
 
 [dependencies]
-egui = "0.26"
+egui26 = { version = "0.26", package = "egui", default-features = false, optional = true }
+egui27 = { version = "0.27", package = "egui", default-features = false, optional = true }
 
 [dev-dependencies]
 eframe = "0.26"
+
+[features]
+default = [ "egui26" ]
