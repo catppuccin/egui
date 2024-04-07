@@ -42,11 +42,13 @@
 
 ## Usage
 
+catppuccin-egui uses Cargo features to add support for new egui versions without breaking backwards compatibility.
+
 Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-catppuccin-egui = "5.0"
+catppuccin-egui = { version = "5.0", features = ["egui27"] }
 ```
 
 To use a theme, call the `set_theme` function with a theme and the egui context:
