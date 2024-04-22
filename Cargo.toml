@@ -11,7 +11,7 @@ repository = "https://github.com/catppuccin/egui"
 license = "MIT"
 keywords = ["egui", "catppuccin", "theme", "gui"]
 categories = ["gui"]
-exclude = ["assets/"]
+exclude = ["assets/", "src/themes.rs.tera"]
 
 [dependencies]
 egui26 = { version = "0.26", package = "egui", default-features = false, optional = true }
