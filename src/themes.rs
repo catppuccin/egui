@@ -146,3 +146,4 @@ pub const MOCHA: Theme = Theme {
     mantle: Color32::from_rgb(24, 24, 37),
     crust: Color32::from_rgb(17, 17, 27),
 };
+

@@ -16,6 +16,7 @@ fn main() -> ExitCode {
     let outfile = fs::OpenOptions::new()
         .write(true)
         .create(true)
+        .truncate(true)
         .open("src/themes.rs")
         .unwrap();
 
@@ -32,5 +33,5 @@ fn main() -> ExitCode {
         println!("cargo::warning=whiskers exited nonzero");
         return ExitCode::FAILURE;
     }
-    return ExitCode::SUCCESS;
+    ExitCode::SUCCESS
 }
