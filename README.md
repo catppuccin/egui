@@ -57,7 +57,11 @@ To use a theme, call the `set_theme` function with a theme and the egui context:
 catppuccin_egui::set_theme(&ctx, catppuccin_egui::MOCHA);
 ```
 
+To run the example app, run `cargo run --example todo`.
+
 See the full documentation at https://docs.rs/catppuccin-egui.
+
+[Whiskers](https://github.com/catppuccin/toolbox/tree/main/whiskers) is required as a build-time development dependency.
 
 ## 💝 Thanks to
 
