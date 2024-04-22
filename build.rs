@@ -1,4 +1,8 @@
-use std::{fs, path::Path, process::{Command, ExitCode}};
+use std::{
+    fs,
+    path::Path,
+    process::{Command, ExitCode},
+};
 
 fn main() -> ExitCode {
     println!("cargo::rerun-if-changed=src/themes.rs.tera");
