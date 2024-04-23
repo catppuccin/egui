@@ -11,12 +11,10 @@ pub struct Theme {
     pub {{name}}: Color32,
     {%- endfor %}
 }
-
-{% for id, flavor in flavors -%}
+{% for id, flavor in flavors %}
 pub const {{id | upper}}: Theme = Theme {
     {%- for name, color in flavor.colors %}
     {{name}}: Color32::from_rgb({{color.rgb.r}}, {{color.rgb.g}}, {{color.rgb.b}}),
     {%- endfor %}
 };
-
 {% endfor %}
