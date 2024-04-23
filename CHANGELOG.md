@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.1](https://github.com/catppuccin/egui/compare/v5.1.0...v5.1.1) (2024-04-23)
+
+
+### Bug Fixes
+
+* don't require whiskers in build.rs ([73e0d2e](https://github.com/catppuccin/egui/commit/73e0d2e21a22a07718681ee2d58b1e4688b8b35d))
+
 ## [5.1.0](https://github.com/catppuccin/egui/compare/v5.0.0...v5.1.0) (2024-04-07)
 
 
