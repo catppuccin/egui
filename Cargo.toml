@@ -1,6 +1,6 @@
 [package]
 name = "catppuccin-egui"
-version = "5.1.1"
+version = "5.1.2"
 authors = ["Sam Nystrom <sam@samnystrom.dev>"]
 edition = "2021"
 description = "Soothing pastel theme for egui."
@@ -16,9 +16,10 @@ exclude = ["assets/", "src/themes.rs.tera"]
 [dependencies]
 egui26 = { version = "0.26", package = "egui", default-features = false, optional = true }
 egui27 = { version = "0.27", package = "egui", default-features = false, optional = true }
+egui28 = { version = "0.28", package = "egui", default-features = false, optional = true }
 
 [dev-dependencies]
 eframe = "0.26"
 
 [features]
-default = [ "egui26" ]
+default = ["egui26"]
