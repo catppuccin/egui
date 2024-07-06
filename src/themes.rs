@@ -1,4 +1,4 @@
-use crate::egui::Color32;
+use egui::Color32;
 
 /// The colors for a theme variant.
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
