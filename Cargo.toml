@@ -22,4 +22,4 @@ egui28 = { version = "0.28", package = "egui", default-features = false, optiona
 eframe = "0.28"
 
 [features]
-default = [ "egui26" ]
+default = [ "egui28" ]
