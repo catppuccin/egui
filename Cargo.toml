@@ -14,11 +14,7 @@ categories = ["gui"]
 exclude = ["assets/", "src/themes.rs.tera"]
 
 [dependencies]
-egui26 = { version = "0.26", package = "egui", default-features = false, optional = true }
-egui27 = { version = "0.27", package = "egui", default-features = false, optional = true }
+egui = "0.28"
 
 [dev-dependencies]
-eframe = "0.26"
-
-[features]
-default = [ "egui26" ]
+eframe = "0.28"
