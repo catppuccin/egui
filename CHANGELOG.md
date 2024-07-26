@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/catppuccin/egui/compare/v5.1.1...v5.2.0) (2024-07-26)
+
+
+### Features
+
+* add support for egui version 0.28 ([#44](https://github.com/catppuccin/egui/issues/44)) ([e8709eb](https://github.com/catppuccin/egui/commit/e8709ebe8c682fd000daa4b4444809ed767aa6b4))
+
 ## [5.1.1](https://github.com/catppuccin/egui/compare/v5.1.0...v5.1.1) (2024-04-23)
 
 
