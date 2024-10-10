@@ -3,6 +3,7 @@
   "last-release-sha": "e15257f3f72f2b574274e3f192f183cdec273eab",
   "packages": {
     ".": {
+      "package-name": "",
       "release-type": "rust",
       "extra-files": [
         {
