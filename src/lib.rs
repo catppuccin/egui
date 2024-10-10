@@ -30,7 +30,12 @@
 //! ```
 //!
 
-#[cfg(not(any(feature = "egui26", feature = "egui27", feature = "egui28")))]
+#[cfg(not(any(
+    feature = "egui26",
+    feature = "egui27",
+    feature = "egui28",
+    feature = "egui29"
+)))]
 compile_error!("at least one egui version must be enabled");
 
 #[cfg(feature = "egui26")]
@@ -39,6 +44,8 @@ use egui26 as egui;
 use egui27 as egui;
 #[cfg(feature = "egui28")]
 use egui28 as egui;
+#[cfg(feature = "egui29")]
+use egui29 as egui;
 
 use egui::{epaint, style};
 
