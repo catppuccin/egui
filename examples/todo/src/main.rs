@@ -8,7 +8,7 @@ use eframe::egui;
 fn main() {
     let native_options = eframe::NativeOptions::default();
     let app = App::default();
-    if let Err(e) = eframe::run_native("todos", native_options, Box::new(|_| Box::new(app))) {
+    if let Err(e) = eframe::run_native("todos", native_options, Box::new(|_| Ok(Box::new(app)))) {
         eprintln!("{e}");
         std::process::exit(1);
     }

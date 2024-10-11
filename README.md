@@ -61,7 +61,7 @@ To use a theme, call the `set_theme` function with a theme and the egui context:
 catppuccin_egui::set_theme(&ctx, catppuccin_egui::MOCHA);
 ```
 
-To run the example app, run `cargo run --example todo`.
+To run the example app, run `cargo run -p todo`.
 
 See the full documentation at https://docs.rs/catppuccin-egui.
 
