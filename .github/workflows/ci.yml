@@ -25,9 +25,9 @@ jobs:
       - name: Install whiskers
         run: cargo install catppuccin-whiskers
       - name: Check formatting
-        run: cargo fmt --check
+        run: cargo fmt --all --check
       - name: Run Clippy
-        run: cargo clippy -- -D warnings
+        run: cargo clippy --all -- -D warnings
 
   Test:
     runs-on: ubuntu-latest
@@ -43,4 +43,4 @@ jobs:
       - name: Install whiskers
         run: cargo install catppuccin-whiskers
       - name: Run tests
-        run: cargo test
+        run: cargo test --all
