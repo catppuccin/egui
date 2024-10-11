@@ -3,7 +3,7 @@ members = ["examples/todo"]
 
 [package]
 name = "catppuccin-egui"
-version = "5.3.0"
+version = "5.4.0"
 authors = ["Sam Nystrom <sam@samnystrom.dev>"]
 edition = "2021"
 description = "Soothing pastel theme for egui."
