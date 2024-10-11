@@ -1,0 +1,10 @@
+[package]
+name = "todo"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[dependencies]
+eframe = "0.29"
+catppuccin-egui = { version = "5.3", default-features = false, features = ["egui29"] }
