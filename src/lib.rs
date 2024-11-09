@@ -99,6 +99,12 @@ fn make_widget_visual(
 impl Theme {
     fn visuals(&self, old: egui::Visuals) -> egui::Visuals {
         let is_latte = *self == LATTE;
+        let shadow_color = if is_latte {
+            egui::Color32::from_black_alpha(25)
+        } else {
+            egui::Color32::from_black_alpha(96)
+        };
+
         egui::Visuals {
             override_text_color: Some(self.text),
             hyperlink_color: self.rosewater,
@@ -127,12 +133,13 @@ impl Theme {
                     ..old.selection.stroke
                 },
             },
+
             window_shadow: epaint::Shadow {
-                color: self.base,
+                color: shadow_color,
                 ..old.window_shadow
             },
             popup_shadow: epaint::Shadow {
-                color: self.base,
+                color: shadow_color,
                 ..old.popup_shadow
             },
             dark_mode: !is_latte,
