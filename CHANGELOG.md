@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.3.1](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.3.0...catppuccin-egui-v5.3.1) (2024-11-09)
+
+
+### Bug Fixes
+
+* use correct color for shadows ([#70](https://github.com/catppuccin/egui/issues/70)) ([38af073](https://github.com/catppuccin/egui/commit/38af073771b6f1e254e08059f39b15b4f5663405))
+
 ## [5.3.0](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.2.0...catppuccin-egui-v5.3.0) (2024-10-10)
 
 
