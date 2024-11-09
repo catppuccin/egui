@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "last-release-sha": "e15257f3f72f2b574274e3f192f183cdec273eab",
   "packages": {
     ".": {
       "package-name": "",
