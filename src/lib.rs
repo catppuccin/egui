@@ -84,6 +84,10 @@ fn make_widget_visual(
     style::WidgetVisuals {
         bg_fill,
         weak_bg_fill: bg_fill,
+        bg_stroke: egui::Stroke {
+            color: bg_fill,
+            ..old.bg_stroke
+        },
         fg_stroke: egui::Stroke {
             color: theme.text,
             ..old.fg_stroke
