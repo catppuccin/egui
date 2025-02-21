@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.4.0](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.3.1...catppuccin-egui-v5.4.0) (2025-02-21)
+
+
+### Features
+
+* egui 0.30 support ([#80](https://github.com/catppuccin/egui/issues/80)) ([ef74ff6](https://github.com/catppuccin/egui/commit/ef74ff64aaac7b0de837430dfc1bf010b917d81a))
+
 ## [5.3.1](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.3.0...catppuccin-egui-v5.3.1) (2024-11-09)
 
 
