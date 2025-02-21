@@ -88,7 +88,7 @@ fn make_widget_visual(
         bg_fill,
         weak_bg_fill: bg_fill,
         bg_stroke: egui::Stroke {
-            color: theme.overlay1,
+            color: bg_fill,
             ..old.bg_stroke
         },
         fg_stroke: egui::Stroke {
