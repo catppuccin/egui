@@ -175,7 +175,7 @@ impl eframe::App for App {
                     let completed = self.todos.iter().filter(|todo| todo.completed).count();
                     if completed > 0
                         && ui
-                            .button(format!("Clear completed ({})", completed))
+                            .button(format!("Clear completed ({completed})"))
                             .clicked()
                     {
                         self.todos.retain(|todo| !todo.completed);
