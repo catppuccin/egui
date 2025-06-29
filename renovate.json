@@ -6,7 +6,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["egui"],
-      "prCreation": "approval"
+      "enabled": false
     }
   ]
 }
