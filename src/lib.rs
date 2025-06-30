@@ -112,7 +112,6 @@ impl Theme {
         };
 
         egui::Visuals {
-            override_text_color: Some(self.text),
             hyperlink_color: self.rosewater,
             faint_bg_color: self.surface0,
             extreme_bg_color: self.crust,
@@ -135,11 +134,10 @@ impl Theme {
             selection: style::Selection {
                 bg_fill: self.blue.linear_multiply(if is_latte { 0.4 } else { 0.2 }),
                 stroke: egui::Stroke {
-                    color: self.overlay1,
+                    color: self.text,
                     ..old.selection.stroke
                 },
             },
-
             window_shadow: epaint::Shadow {
                 color: shadow_color,
                 ..old.window_shadow
