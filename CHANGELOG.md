@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.6.0](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.5.0...catppuccin-egui-v5.6.0) (2025-07-17)
+
+
+### Features
+
+* add egui 0.32 support ([#91](https://github.com/catppuccin/egui/issues/91)) ([a49020d](https://github.com/catppuccin/egui/commit/a49020d4faec8e9cb62f68588bd40111111fcd6c))
+
+
+### Bug Fixes
+
+* inactive and hint text colours not being faded ([#90](https://github.com/catppuccin/egui/issues/90)) ([9468d77](https://github.com/catppuccin/egui/commit/9468d7782ad0453bfeb0bc45c70e5e55b2d8d60f))
+
 ## [5.5.0](https://github.com/catppuccin/egui/compare/catppuccin-egui-v5.4.0...catppuccin-egui-v5.5.0) (2025-03-13)
 
 
