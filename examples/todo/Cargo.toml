@@ -6,5 +6,5 @@ license = "MIT"
 publish = false
 
 [dependencies]
-eframe = "0.31"
-catppuccin-egui = { version = "5.5", default-features = false, features = ["egui31"] }
+eframe = "0.32"
+catppuccin-egui = { version = "5.6", default-features = false, features = ["egui32"] }
