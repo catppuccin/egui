@@ -102,12 +102,13 @@ impl eframe::App for App {
                 CatppuccinTheme::Mocha => MOCHA,
             },
         );
-        ctx.set_pixels_per_point(1.25);
 
         let mut fonts = egui::FontDefinitions::default();
         fonts.font_data.insert(
             "open-sans".to_string(),
-            egui::FontData::from_static(include_bytes!("./OpenSans-Regular.ttf")),
+            std::sync::Arc::new(egui::FontData::from_static(include_bytes!(
+                "./OpenSans-Regular.ttf"
+            ))),
         );
         fonts
             .families
