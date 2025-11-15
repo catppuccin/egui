@@ -50,7 +50,7 @@ Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-catppuccin-egui = { version = "5.7.0", default-features = false, features = ["egui32"] }
+catppuccin-egui = { version = "5.7.0", default-features = false, features = ["egui33"] }
 ```
 
 <!-- x-release-please-end -->
