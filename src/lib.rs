@@ -69,7 +69,12 @@ pub use themes::*;
 
 /// Apply the given theme to a [`Context`](egui::Context).
 pub fn set_theme(ctx: &egui::Context, theme: Theme) {
+    #[cfg(feature = "egui34")]
+    let old = ctx.global_style().visuals.clone();
+
+    #[cfg(not(feature = "egui34"))]
     let old = ctx.style().visuals.clone();
+
     ctx.set_visuals(theme.visuals(old));
 }
 
