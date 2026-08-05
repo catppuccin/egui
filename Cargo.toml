@@ -27,7 +27,7 @@ egui32 = { version = "0.32", package = "egui", default-features = false, optiona
 egui33 = { version = "0.33", package = "egui", default-features = false, optional = true }
 
 [dev-dependencies]
-eframe = "0.26"
+eframe = "0.36"
 
 [features]
 default = ["egui26"]
