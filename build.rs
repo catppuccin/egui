@@ -25,7 +25,7 @@ fn main() -> ExitCode {
         .stdout(outfile)
         .status()
     else {
-        println!("cargo::warning=Failed to run whiskers (https://github.com/catppuccin/toolbox/tree/main/whiskers). Is it installed?");
+        println!("cargo::warning=Failed to run whiskers (https://github.com/catppuccin/whiskers). Is it installed?");
         return ExitCode::SUCCESS;
     };
 
