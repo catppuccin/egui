@@ -65,7 +65,7 @@ To run the example app, run `cargo run -p todo`.
 
 See the full documentation at https://docs.rs/catppuccin-egui.
 
-[Whiskers](https://github.com/catppuccin/toolbox/tree/main/whiskers) is required as a build-time development dependency.
+[Whiskers](https://github.com/catppuccin/whiskers) is required as a build-time development dependency.
 
 ## 💝 Thanks to
 
