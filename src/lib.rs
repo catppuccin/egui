@@ -39,6 +39,9 @@
     feature = "egui31",
     feature = "egui32",
     feature = "egui33",
+    feature = "egui34",
+    feature = "egui35",
+    feature = "egui36",
 )))]
 compile_error!("at least one egui version must be enabled");
 
@@ -58,6 +61,12 @@ use egui31 as egui;
 use egui32 as egui;
 #[cfg(feature = "egui33")]
 use egui33 as egui;
+#[cfg(feature = "egui34")]
+use egui34 as egui;
+#[cfg(feature = "egui35")]
+use egui35 as egui;
+#[cfg(feature = "egui36")]
+use egui36 as egui;
 
 use egui::{epaint, style};
 
@@ -65,8 +74,12 @@ mod themes;
 pub use themes::*;
 
 /// Apply the given theme to a [`Context`](egui::Context).
-pub fn set_theme(ctx: &egui::Context, theme: Theme) {
+pub fn set_theme(ctx: &egui::Context, theme: CatppuccinTheme) {
+    #[cfg(any(feature = "egui34", feature = "egui35", feature = "egui36"))]
+    let old = ctx.global_style().visuals.clone();
+    #[cfg(not(any(feature = "egui34", feature = "egui35", feature = "egui36")))]
     let old = ctx.style().visuals.clone();
+
     ctx.set_visuals(theme.visuals(old));
 }
 
@@ -83,14 +96,14 @@ pub fn set_theme(ctx: &egui::Context, theme: Theme) {
 /// ctx.set_style(style);
 /// # });
 /// ```
-pub fn set_style_theme(style: &mut egui::Style, theme: Theme) {
+pub fn set_style_theme(style: &mut egui::Style, theme: CatppuccinTheme) {
     let old = style.visuals.clone();
     style.visuals = theme.visuals(old);
 }
 
 fn make_widget_visual(
     old: style::WidgetVisuals,
-    theme: &Theme,
+    theme: &CatppuccinTheme,
     bg_fill: egui::Color32,
 ) -> style::WidgetVisuals {
     style::WidgetVisuals {
@@ -108,7 +121,7 @@ fn make_widget_visual(
     }
 }
 
-impl Theme {
+impl CatppuccinTheme {
     fn visuals(&self, old: egui::Visuals) -> egui::Visuals {
         let is_latte = *self == LATTE;
         let shadow_color = if is_latte {

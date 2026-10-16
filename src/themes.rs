@@ -2,7 +2,7 @@ use crate::egui::Color32;
 
 /// The colors for a theme variant.
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
-pub struct Theme {
+pub struct CatppuccinTheme {
     pub rosewater: Color32,
     pub flamingo: Color32,
     pub pink: Color32,
@@ -31,7 +31,7 @@ pub struct Theme {
     pub crust: Color32,
 }
 
-pub const LATTE: Theme = Theme {
+pub const LATTE: CatppuccinTheme = CatppuccinTheme {
     rosewater: Color32::from_rgb(220, 138, 120),
     flamingo: Color32::from_rgb(221, 120, 120),
     pink: Color32::from_rgb(234, 118, 203),
@@ -60,7 +60,7 @@ pub const LATTE: Theme = Theme {
     crust: Color32::from_rgb(220, 224, 232),
 };
 
-pub const FRAPPE: Theme = Theme {
+pub const FRAPPE: CatppuccinTheme = CatppuccinTheme {
     rosewater: Color32::from_rgb(242, 213, 207),
     flamingo: Color32::from_rgb(238, 190, 190),
     pink: Color32::from_rgb(244, 184, 228),
@@ -89,7 +89,7 @@ pub const FRAPPE: Theme = Theme {
     crust: Color32::from_rgb(35, 38, 52),
 };
 
-pub const MACCHIATO: Theme = Theme {
+pub const MACCHIATO: CatppuccinTheme = CatppuccinTheme {
     rosewater: Color32::from_rgb(244, 219, 214),
     flamingo: Color32::from_rgb(240, 198, 198),
     pink: Color32::from_rgb(245, 189, 230),
@@ -118,7 +118,7 @@ pub const MACCHIATO: Theme = Theme {
     crust: Color32::from_rgb(24, 25, 38),
 };
 
-pub const MOCHA: Theme = Theme {
+pub const MOCHA: CatppuccinTheme = CatppuccinTheme {
     rosewater: Color32::from_rgb(245, 224, 220),
     flamingo: Color32::from_rgb(242, 205, 205),
     pink: Color32::from_rgb(245, 194, 231),
@@ -146,3 +146,4 @@ pub const MOCHA: Theme = Theme {
     mantle: Color32::from_rgb(24, 24, 37),
     crust: Color32::from_rgb(17, 17, 27),
 };
+

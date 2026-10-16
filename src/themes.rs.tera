@@ -6,13 +6,13 @@ use crate::egui::Color32;
 
 /// The colors for a theme variant.
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq)]
-pub struct Theme {
+pub struct CatppuccinTheme {
     {%- for name, _ in flavors.latte.colors %}
     pub {{name}}: Color32,
     {%- endfor %}
 }
 {% for id, flavor in flavors %}
-pub const {{id | upper}}: Theme = Theme {
+pub const {{id | upper}}: CatppuccinTheme = CatppuccinTheme {
     {%- for name, color in flavor.colors %}
     {{name}}: Color32::from_rgb({{color.rgb.r}}, {{color.rgb.g}}, {{color.rgb.b}}),
     {%- endfor %}
